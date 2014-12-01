@@ -1,10 +1,12 @@
-import xmlrpclib
+#RPC program
 from SimpleXMLRPCServer import SimpleXMLRPCServer
+HOST = (("localhost", 8000))
 
-def is_even(n):
-    return n%2 == 0
+def isEven(n):
+    return int(n)%2 == 0
 
-server = SimpleXMLRPCServer(("localhost", 8000))
-print "Listening on port 8000..."
-server.register_function(is_even, "is_even")
+server = SimpleXMLRPCServer(HOST)
+
+print "Server is now running..."
+server.register_function(isEven, "isEven")
 server.serve_forever()
