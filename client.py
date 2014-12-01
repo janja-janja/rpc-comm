@@ -7,7 +7,7 @@ while True:
 	print "\tis %s even??:->> %s" % (userInp, str(gateway.isEven(userInp)))
 	print "\tTo quit press q\n"
 
-	if userInp == 'q' || userInp == 'Q':
+	if userInp == 'q' or userInp == 'Q':
 		break
 	else:
 		continue
