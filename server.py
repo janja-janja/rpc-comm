@@ -7,6 +7,6 @@ def isEven(n):
 
 server = SimpleXMLRPCServer(HOST)
 
-print "Server is now running..."
+print "Server is now running at ->> " + str(HOST)
 server.register_function(isEven, "isEven")
 server.serve_forever()
